@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Slide Show </title>
+    </head>
+
+    <body>
+        <img src="sbbird.jpg" id="myImage" width="1000" height="500">
+        <br>
+        <button value="Previous" onclick="previous()">Previous</button>
+        <button value="next" onclick="next()">Next</button>
+
+        <script>
+        var i = 0;
+        var arr = ["sbbird.jpg", "flyjelly.jpeg","pickleRick.jpeg","tidepods.jpeg","cookiemonster.jpeg"];
+
+        function next(){
+            i++;
+            if(i == 5)
+            {
+              i=0;
+            }
+            document.getElementById('myImage').src=arr[i];
+          }
+
+        function previous(){
+            i--;
+            if (i == -1){
+              i = 4;
+            }
+            document.getElementById('myImage').src=arr[i];
+          }
+
+        </script>
+    </body>
+</html>

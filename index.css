@@ -1,0 +1,10 @@
+.jumbotron
+{
+    background-image: url("backdrop.jpeg");
+    background-position-y: center;
+    color: white;
+}
+
+.card {
+    margin-left: 20px;
+  }

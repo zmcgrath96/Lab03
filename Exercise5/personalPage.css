@@ -1,0 +1,35 @@
+.profPic
+{
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 50px;
+    border-radius: 20%;
+    padding: 5px;
+    background-color: black;
+    top:8px;
+    z-index: 1;
+}
+
+.jumbotron
+{
+    background-color: tan;
+}
+
+.gray
+{
+    background-color: gray;
+    color: lightgray;
+}
+
+.lightgray
+{
+    background-color: lightgray;
+}
+
+a.link
+{
+    color: orange;
+}
+

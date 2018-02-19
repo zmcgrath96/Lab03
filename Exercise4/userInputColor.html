@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Change color</title>
+    </head>
+    <body>
+        <div>
+            <p id = "box">
+                Wowsers here we are<br/>
+                Below are some options to change the color and width of my border 
+                and options to change the colors of my background. <br/>
+                Colors are broken into the RGB parts, and parameters range from 
+                0 to 255. <br/> When it comes to border width, its a one size fits all, 
+                meaning all borders will change the same.  Input a number or 
+                size thin, medium, or thick.
+            </p>
+        </div>
+        <div>
+            <label for="border">BORDER INPUT</label>
+                   <form>
+                       <input placeholder="red" id="bRed" type="text">
+                   </form>
+                   <form>
+                        <input placeholder="blue" id="bBlue" type="text">
+                    </form>
+                    <form>
+                            <input placeholder="green" id="bGreen" type="text">
+                    </form>
+                    <form>
+                            <input placeholder="border width" id="width" type="text">
+                    </form>
+        </div>
+
+        <div>
+                <label for="border">BACKGROUND INPUT</label>
+                       <form>
+                           <input placeholder="red" id="red" type="text">
+                       </form>
+                       <form>
+                            <input placeholder="blue" id="blue" type="text">
+                        </form>
+                        <form>
+                                <input placeholder="green" id="green" type="text">
+                        </form>
+                        
+        </div>
+        <button onclick="submit()">Submit</button>
+
+        <script>
+            function submit(){
+
+            var tag = document.getElementById("box");
+            tag.style.backgroundColor = backgroundColor();
+            tag.style.borderStyle = "solid";
+            tag.style.borderWidth = borderWidth();
+            tag.style.borderColor = borderColor();
+
+            function borderColor(){
+                let r = document.getElementById("bRed").value;
+                let g = document.getElementById("bGreen").value;
+                let b = document.getElementById("bBlue").value;
+                if (r != parseInt(r) || g!= parseInt(g) || b != parseInt(b)){
+                    alert("input valid number");
+                    return;
+                }
+                else if (((r < 0) || (r > 255)) || ((g < 0) || (g > 255)) || ((b < 0) || (b > 255))){
+                    alert("input a valid number");
+                    return;
+                }
+                return "rgb("+r+","+g+","+b+")";
+            }
+
+            function backgroundColor(){
+                let r = document.getElementById("red").value;
+                let g = document.getElementById("green").value;
+                let b = document.getElementById("blue").value;
+                if (r != parseInt(r) || g!= parseInt(g) || b != parseInt(b)){
+                    alert("input valid number");
+                    return;
+                }
+                else if (((r < 0) || (r > 255)) || ((g < 0) || (g > 255)) || ((b < 0) || (b > 255))){
+                    alert("input a valid number");
+                    return;
+                }
+                return "rgb("+r+","+g+","+b+")";
+            }
+
+            function borderWidth(){
+                let w = document.getElementById("width").value;
+                if (w == parseInt(w)){
+                    console.log("cool");                    
+                }
+                else{
+                    w.toLowerCase();
+                    if(w == "thin"){
+                   
+                    }
+                    else if (w == "medium"){
+                     
+                    }
+                    else if (w == "thick"){
+                        
+                    }
+                    else{
+                        alert("input valid border");
+                    }
+
+                }
+                return (w.toString());
+            }
+            }
+        </script>
+    </body>
+</html>
